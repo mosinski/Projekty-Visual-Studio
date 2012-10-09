@@ -77,15 +77,18 @@
             // 
             // Gracz
             // 
+            this.Gracz.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Gracz.Image = ((System.Drawing.Image)(resources.GetObject("Gracz.Image")));
             this.Gracz.Location = new System.Drawing.Point(38, 76);
             this.Gracz.Name = "Gracz";
             this.Gracz.Size = new System.Drawing.Size(193, 193);
             this.Gracz.TabIndex = 3;
             this.Gracz.TabStop = false;
+            this.Gracz.Click += new System.EventHandler(this.Gracz_Click);
             // 
             // Komputer
             // 
+            this.Komputer.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.Komputer.ErrorImage = null;
             this.Komputer.Image = ((System.Drawing.Image)(resources.GetObject("Komputer.Image")));
             this.Komputer.Location = new System.Drawing.Point(347, 76);
@@ -97,6 +100,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(133, 5);
             this.label2.Name = "label2";
@@ -131,6 +135,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(519, 5);
             this.label4.Name = "label4";
@@ -148,6 +153,7 @@
             this.textBox2.TabIndex = 10;
             this.textBox2.Visible = false;
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // Form1
             // 

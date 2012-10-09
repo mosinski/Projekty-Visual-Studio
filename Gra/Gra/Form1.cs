@@ -55,6 +55,7 @@ namespace Gra
 
         private void textBox2_KeyDown(object sender, KeyEventArgs e)
         {
+
             if (e.KeyCode == Keys.Enter)
             {
                 if (textBox2.Text == "")
@@ -75,9 +76,35 @@ namespace Gra
             }
         }
 
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+                int isNumber = 0;
+                e.Handled = !int.TryParse(e.KeyChar.ToString(), out isNumber);
+        }
+
         private void label4_Click(object sender, EventArgs e)
         {
             textBox2.Visible = true;
+        }
+
+        private void Gracz_Click(object sender, EventArgs e)
+        {
+            Random r = new Random();
+            int wynik_komp = r.Next(3);
+            if (label2.Text != "............." & label4.Text != "..")
+            {
+                int x;
+                x = Convert.ToInt32(label4.Text);
+                MessageBox.Show("Gratulacja Spełniasz wszystkie warunki " + wynik_komp);
+                //while (wynik_czlowiek < x && wynik_komp < x)
+                //{
+                //}
+                
+            }
+            else
+            {
+                MessageBox.Show("Najpierw uzupełnij Imie gracza oraz ilość wygranych!");
+            }
         }
     }
 }
