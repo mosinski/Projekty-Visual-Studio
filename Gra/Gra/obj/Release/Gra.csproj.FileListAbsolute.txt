@@ -1,0 +1,9 @@
+C:\Users\Miłosz\Documents\Visual Studio 2012\Projects\Gra\Gra\bin\Release\Gra.exe.config
+C:\Users\Miłosz\Documents\Visual Studio 2012\Projects\Gra\Gra\bin\Release\Gra.exe
+C:\Users\Miłosz\Documents\Visual Studio 2012\Projects\Gra\Gra\bin\Release\Gra.pdb
+C:\Users\Miłosz\Documents\Visual Studio 2012\Projects\Gra\Gra\obj\Release\Gra.csprojResolveAssemblyReference.cache
+C:\Users\Miłosz\Documents\Visual Studio 2012\Projects\Gra\Gra\obj\Release\Gra.Form1.resources
+C:\Users\Miłosz\Documents\Visual Studio 2012\Projects\Gra\Gra\obj\Release\Gra.Properties.Resources.resources
+C:\Users\Miłosz\Documents\Visual Studio 2012\Projects\Gra\Gra\obj\Release\Gra.csproj.GenerateResource.Cache
+C:\Users\Miłosz\Documents\Visual Studio 2012\Projects\Gra\Gra\obj\Release\Gra.exe
+C:\Users\Miłosz\Documents\Visual Studio 2012\Projects\Gra\Gra\obj\Release\Gra.pdb

@@ -65,7 +65,7 @@
             // Gracz
             // 
             this.Gracz.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Gracz.Image = ((System.Drawing.Image)(resources.GetObject("Gracz.Image")));
+            this.Gracz.Image = global::Gra.Properties.Resources.question_md;
             this.Gracz.InitialImage = null;
             this.Gracz.Location = new System.Drawing.Point(38, 76);
             this.Gracz.Name = "Gracz";
@@ -78,7 +78,7 @@
             // 
             this.Komputer.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.Komputer.ErrorImage = null;
-            this.Komputer.Image = ((System.Drawing.Image)(resources.GetObject("Komputer.Image")));
+            this.Komputer.Image = global::Gra.Properties.Resources.computer_md;
             this.Komputer.Location = new System.Drawing.Point(347, 76);
             this.Komputer.Name = "Komputer";
             this.Komputer.Size = new System.Drawing.Size(193, 193);
@@ -118,7 +118,6 @@
             this.label3.Size = new System.Drawing.Size(176, 24);
             this.label3.TabIndex = 8;
             this.label3.Text = "Do ilu wygranych:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -148,7 +147,7 @@
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(217, 104);
+            this.pictureBox2.Location = new System.Drawing.Point(219, 104);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(137, 137);
             this.pictureBox2.TabIndex = 12;
@@ -187,7 +186,7 @@
             this.label5.Location = new System.Drawing.Point(113, 244);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 96);
+            this.label5.Size = new System.Drawing.Size(174, 96);
             this.label5.TabIndex = 1;
             this.label5.Text = "0";
             // 
@@ -213,7 +212,7 @@
             this.label7.Location = new System.Drawing.Point(364, 244);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 96);
+            this.label7.Size = new System.Drawing.Size(176, 96);
             this.label7.TabIndex = 16;
             this.label7.Text = "0";
             // 
@@ -238,8 +237,11 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Opacity = 0.95D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Papier Nożyce Kamień";
             ((System.ComponentModel.ISupportInitialize)(this.Gracz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Komputer)).EndInit();

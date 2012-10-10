@@ -44,10 +44,6 @@ namespace Gra
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void label4_Click(object sender, EventArgs e)
         {
@@ -66,6 +62,8 @@ namespace Gra
                     pictureBox1.Visible = true;
                     pictureBox2.Visible = true;
                     pictureBox3.Visible = true;
+                    //pictureBox4.Visible = true;
+                    //pictureBox5.Visible = true;
                 }
                 else
                 {
@@ -75,8 +73,9 @@ namespace Gra
                         wynik_czlowiek = 0;
                         label5.Text = Convert.ToString(wynik_czlowiek);
                         label7.Text = Convert.ToString(wynik_komp);
+                        Gracz.Image = Properties.Resources.question_md;
+                        Komputer.Image = Properties.Resources.computer_md;
 
-                        MessageBox.Show("Gra rozpoczyna się na nowo");
                     }
                     else
                     {
@@ -104,7 +103,6 @@ namespace Gra
             Gracz.Image = Properties.Resources.paper_big;
             silnik();
         }
-
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {

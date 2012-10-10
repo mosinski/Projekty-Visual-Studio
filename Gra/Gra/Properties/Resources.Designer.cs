@@ -63,6 +63,16 @@ namespace Gra.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap computer_md {
+            get {
+                object obj = ResourceManager.GetObject("computer-md", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap paper_big {
             get {
                 object obj = ResourceManager.GetObject("paper-big", resourceCulture);
@@ -76,6 +86,16 @@ namespace Gra.Properties {
         internal static System.Drawing.Bitmap paper_md {
             get {
                 object obj = ResourceManager.GetObject("paper-md", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap question_md {
+            get {
+                object obj = ResourceManager.GetObject("question-md", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +136,26 @@ namespace Gra.Properties {
         internal static System.Drawing.Bitmap scissors_md1 {
             get {
                 object obj = ResourceManager.GetObject("scissors-md1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spock_big {
+            get {
+                object obj = ResourceManager.GetObject("spock-big", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spock_md {
+            get {
+                object obj = ResourceManager.GetObject("spock-md", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
