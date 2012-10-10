@@ -12,14 +12,10 @@ namespace Gra
 {
     public partial class Form1 : Form
     {
-        static int x = 0, komputer, czlowiek, wynik_komp = 0, wynik_czlowiek = 0, licznik = 0, ponownie;
+        static int x = 0, komputer = 0, czlowiek = 0, wynik_komp = 0, wynik_czlowiek = 0, licznik = 0, ponownie;
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -44,8 +40,7 @@ namespace Gra
             }
             else if (e.KeyCode == Keys.Escape)
             {
-                textBox1.Visible = false;
-                
+                textBox1.Visible = false;     
             }
         }
 
@@ -54,55 +49,41 @@ namespace Gra
 
         }
 
-        private void textBox2_KeyDown(object sender, KeyEventArgs e)
-        {
-
-            if (e.KeyCode == Keys.Enter)
-            {
-                if (textBox2.Text == "")
-                {
-                    label4.Text = "..";
-                    textBox2.Visible = false;
-                }
-                else
-                {
-                    label4.Text = textBox2.Text;
-                    textBox2.Visible = false;
-                }
-            }
-            else if (e.KeyCode == Keys.Escape)
-            {
-                textBox2.Visible = false;
-
-            }
-        }
-
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-                int isNumber = 0;
-                e.Handled = !int.TryParse(e.KeyChar.ToString(), out isNumber);
-        }
-
         private void label4_Click(object sender, EventArgs e)
         {
-            textBox2.Visible = true;
+            numericUpDown1.Visible = true;
         }
 
         private void Gracz_Click(object sender, EventArgs e)
         {
             Random r = new Random();
-            int komputer = r.Next(3);
+            komputer = r.Next(3);
             if (label2.Text != "............." & label4.Text != "..")
             {
                 x = Convert.ToInt32(label4.Text);
-                pictureBox1.Visible = true;
-                pictureBox2.Visible = true;
-                pictureBox3.Visible = true;
-                MessageBox.Show("Gratulacja Spełniasz wszystkie warunki " + wynik_komp);
-                //while (wynik_czlowiek < x && wynik_komp < x)
-                //{
-                //}
-                
+                if (wynik_czlowiek < x && wynik_komp < x)
+                {
+                    pictureBox1.Visible = true;
+                    pictureBox2.Visible = true;
+                    pictureBox3.Visible = true;
+                }
+                else
+                {
+                    if (MessageBox.Show("Czy chcesz zagrać jeszcze raz ?", "Koniec Rozgrywki", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        wynik_komp = 0;
+                        wynik_czlowiek = 0;
+                        label5.Text = Convert.ToString(wynik_czlowiek);
+                        label7.Text = Convert.ToString(wynik_komp);
+
+                        MessageBox.Show("Gra rozpoczyna się na nowo");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Dziękujemy za gre i zapraszamy ponownie!");
+                        Application.Exit();
+                    }
+                }
             }
             else
             {
@@ -112,61 +93,100 @@ namespace Gra
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            int czlowiek = 1;
-            pictureBox1.Visible = false;
-            pictureBox2.Visible = false;
-            pictureBox3.Visible = false;
+            czlowiek = 1;
+            Gracz.Image = Properties.Resources.scissors_big;
             silnik();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            int czlowiek = 0;
-            pictureBox1.Visible = false;
-            pictureBox2.Visible = false;
-            pictureBox3.Visible = false;
+            czlowiek = 0;
+            Gracz.Image = Properties.Resources.paper_big;
             silnik();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            int czlowiek = 2;
-            pictureBox1.Visible = false;
-            pictureBox2.Visible = false;
-            pictureBox3.Visible = false;
+            czlowiek = 2;
+            Gracz.Image = Properties.Resources.rock_big;
             silnik();
         }
 
         private void silnik()
         {
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = false;
+            pictureBox3.Visible = false;
+
             if (czlowiek == 0 && komputer == 0)
             {
-                MessageBox.Show("Remis ;] Komputer wybrał papier.");
+                Komputer.Image = Properties.Resources.paper_big;
             }
             else if (czlowiek == 0 && komputer == 1)
             {
-                MessageBox.Show("Przegrałeś ;( Komputer wybrał nożyczki.");
+                Komputer.Image = Properties.Resources.scissors_big;
+                wynik_komp++;
+                label7.Text = Convert.ToString(wynik_komp);
             }
             else if (czlowiek == 0 && komputer == 2)
             {
-                MessageBox.Show("Wygrałeś ;)) Komputer wybrał kamień.");
+                Komputer.Image = Properties.Resources.rock_big;
+                wynik_czlowiek++;
+                label5.Text = Convert.ToString(wynik_czlowiek);
             }
             else if (czlowiek == 1 && komputer == 0)
             {
-                MessageBox.Show("Wygrałeś ;)) Komputer wybrał papier.");
+                Komputer.Image = Properties.Resources.paper_big;
+                wynik_czlowiek++;
+                label5.Text = Convert.ToString(wynik_czlowiek);
             }
             else if (czlowiek == 1 && komputer == 1)
             {
-                MessageBox.Show("Remis ;] Komputer wybrał nożyczki.");
+                Komputer.Image = Properties.Resources.scissors_big;
             }
             else if (czlowiek == 1 && komputer == 2)
             {
-                MessageBox.Show("Przegrałeś ;( Komputer wybrał kamień.");
+                Komputer.Image = Properties.Resources.rock_big;
+                wynik_komp++;
+                label7.Text = Convert.ToString(wynik_komp);
+            }
+            else if (czlowiek == 2 && komputer == 0)
+            {
+                Komputer.Image = Properties.Resources.paper_big;
+                wynik_komp++;
+                label7.Text = Convert.ToString(wynik_komp);
+            }
+            else if (czlowiek == 2 && komputer == 1)
+            {
+                Komputer.Image = Properties.Resources.scissors_big;
+                wynik_czlowiek++;
+                label5.Text = Convert.ToString(wynik_czlowiek);
+            }
+            else if (czlowiek == 2 && komputer == 2)
+            {
+                Komputer.Image = Properties.Resources.rock_big;
+            }
+        }
+
+        private void numericUpDown1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (numericUpDown1.Text == "0")
+                {
+                    label4.Text = "..";
+                    numericUpDown1.Visible = false;
+                }
+                else if (numericUpDown1.Text != "0")
+                {
+                    label4.Text = numericUpDown1.Text;
+                    numericUpDown1.Visible = false;
+                }
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                numericUpDown1.Visible = false;
             }
         }
     }
