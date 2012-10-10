@@ -12,6 +12,7 @@ namespace Gra
 {
     public partial class Form1 : Form
     {
+        static int x = 0, komputer, czlowiek, wynik_komp = 0, wynik_czlowiek = 0, licznik = 0, ponownie;
         public Form1()
         {
             InitializeComponent();
@@ -90,11 +91,13 @@ namespace Gra
         private void Gracz_Click(object sender, EventArgs e)
         {
             Random r = new Random();
-            int wynik_komp = r.Next(3);
+            int komputer = r.Next(3);
             if (label2.Text != "............." & label4.Text != "..")
             {
-                int x;
                 x = Convert.ToInt32(label4.Text);
+                pictureBox1.Visible = true;
+                pictureBox2.Visible = true;
+                pictureBox3.Visible = true;
                 MessageBox.Show("Gratulacja Spełniasz wszystkie warunki " + wynik_komp);
                 //while (wynik_czlowiek < x && wynik_komp < x)
                 //{
@@ -104,6 +107,66 @@ namespace Gra
             else
             {
                 MessageBox.Show("Najpierw uzupełnij Imie gracza oraz ilość wygranych!");
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            int czlowiek = 1;
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = false;
+            pictureBox3.Visible = false;
+            silnik();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            int czlowiek = 0;
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = false;
+            pictureBox3.Visible = false;
+            silnik();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            int czlowiek = 2;
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = false;
+            pictureBox3.Visible = false;
+            silnik();
+        }
+
+        private void silnik()
+        {
+            if (czlowiek == 0 && komputer == 0)
+            {
+                MessageBox.Show("Remis ;] Komputer wybrał papier.");
+            }
+            else if (czlowiek == 0 && komputer == 1)
+            {
+                MessageBox.Show("Przegrałeś ;( Komputer wybrał nożyczki.");
+            }
+            else if (czlowiek == 0 && komputer == 2)
+            {
+                MessageBox.Show("Wygrałeś ;)) Komputer wybrał kamień.");
+            }
+            else if (czlowiek == 1 && komputer == 0)
+            {
+                MessageBox.Show("Wygrałeś ;)) Komputer wybrał papier.");
+            }
+            else if (czlowiek == 1 && komputer == 1)
+            {
+                MessageBox.Show("Remis ;] Komputer wybrał nożyczki.");
+            }
+            else if (czlowiek == 1 && komputer == 2)
+            {
+                MessageBox.Show("Przegrałeś ;( Komputer wybrał kamień.");
             }
         }
     }
