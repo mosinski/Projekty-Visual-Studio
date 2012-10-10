@@ -79,7 +79,6 @@
             this.Komputer.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.Komputer.ErrorImage = null;
             this.Komputer.Image = ((System.Drawing.Image)(resources.GetObject("Komputer.Image")));
-            this.Komputer.InitialImage = global::Gra.Properties.Resources.scissors_md1;
             this.Komputer.Location = new System.Drawing.Point(347, 76);
             this.Komputer.Name = "Komputer";
             this.Komputer.Size = new System.Drawing.Size(193, 193);
@@ -161,7 +160,6 @@
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::Gra.Properties.Resources.rock_md;
-            this.pictureBox3.InitialImage = global::Gra.Properties.Resources.rock_md;
             this.pictureBox3.Location = new System.Drawing.Point(403, 104);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(137, 137);

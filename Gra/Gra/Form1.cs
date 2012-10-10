@@ -12,7 +12,7 @@ namespace Gra
 {
     public partial class Form1 : Form
     {
-        static int x = 0, komputer = 0, czlowiek = 0, wynik_komp = 0, wynik_czlowiek = 0, licznik = 0, ponownie;
+        static int x = 0, komputer = 0, czlowiek = 0, wynik_komp = 0, wynik_czlowiek = 0;
         public Form1()
         {
             InitializeComponent();
