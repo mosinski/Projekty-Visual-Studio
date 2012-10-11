@@ -1,0 +1,9 @@
+c:\users\miłosz\documents\visual studio 2012\Projects\Gra\Gra\bin\Debug\Gra.exe.config
+c:\users\miłosz\documents\visual studio 2012\Projects\Gra\Gra\bin\Debug\Gra.exe
+c:\users\miłosz\documents\visual studio 2012\Projects\Gra\Gra\bin\Debug\Gra.pdb
+c:\users\miłosz\documents\visual studio 2012\Projects\Gra\Gra\obj\Debug\Gra.Form1.resources
+c:\users\miłosz\documents\visual studio 2012\Projects\Gra\Gra\obj\Debug\Gra.Properties.Resources.resources
+c:\users\miłosz\documents\visual studio 2012\Projects\Gra\Gra\obj\Debug\Gra.csproj.GenerateResource.Cache
+c:\users\miłosz\documents\visual studio 2012\Projects\Gra\Gra\obj\Debug\Gra.exe
+c:\users\miłosz\documents\visual studio 2012\Projects\Gra\Gra\obj\Debug\Gra.pdb
+C:\Users\Miłosz\Documents\Visual Studio 2012\Projects\Gra\Gra\obj\Debug\Gra.csprojResolveAssemblyReference.cache
