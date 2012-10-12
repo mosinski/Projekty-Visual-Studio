@@ -71,6 +71,16 @@ namespace Gra.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon ico {
+            get {
+                object obj = ResourceManager.GetObject("ico", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap lizard_big {
@@ -165,6 +175,26 @@ namespace Gra.Properties {
         internal static System.Drawing.Bitmap scissors_md1 {
             get {
                 object obj = ResourceManager.GetObject("scissors-md1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sound {
+            get {
+                object obj = ResourceManager.GetObject("sound", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap soundoff {
+            get {
+                object obj = ResourceManager.GetObject("soundoff", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

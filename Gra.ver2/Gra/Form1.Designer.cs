@@ -45,6 +45,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.dzwiek = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Gracz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Komputer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,6 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dzwiek)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -244,12 +246,23 @@
             this.pictureBox5.Visible = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
+            // dzwiek
+            // 
+            this.dzwiek.Image = global::Gra.Properties.Resources.sound;
+            this.dzwiek.Location = new System.Drawing.Point(557, 335);
+            this.dzwiek.Name = "dzwiek";
+            this.dzwiek.Size = new System.Drawing.Size(25, 25);
+            this.dzwiek.TabIndex = 19;
+            this.dzwiek.TabStop = false;
+            this.dzwiek.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(584, 362);
+            this.Controls.Add(this.dzwiek);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label6);
@@ -281,6 +294,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dzwiek)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,6 +318,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox dzwiek;
     }
 }
 

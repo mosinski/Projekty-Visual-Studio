@@ -13,7 +13,7 @@ namespace Gra
 {
     public partial class Form1 : Form
     {
-        static int x = 0, komputer = 0, czlowiek = 0, wynik_komp = 0, wynik_czlowiek = 0;
+        static int x = 0, komputer = 0, czlowiek = 0, wynik_komp = 0, wynik_czlowiek = 0, sound = 1;
         public Form1()
         {
             InitializeComponent();
@@ -173,7 +173,7 @@ namespace Gra
             }
 
             //odtwarzanie dźwięku
-            if ((wynik_czlowiek == x) || (wynik_komp == x))
+            if ((sound == 1) && (wynik_czlowiek == x) || (wynik_komp == x))
             {
                 if (wynik_czlowiek > wynik_komp)
                 {
@@ -212,6 +212,20 @@ namespace Gra
         private void s(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            if (sound == 1)
+            {
+                dzwiek.Image = Properties.Resources.soundoff;
+                sound = 0;
+            }
+            else if (sound == 0)
+            {
+                dzwiek.Image = Properties.Resources.sound;
+                sound = 1;
+            }
         }
     }
 }
